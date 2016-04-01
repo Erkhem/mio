@@ -43,6 +43,9 @@ class mio1Perceptrons
 			realInputs[j] = randomNumber(-10, +10);
 		}
 		
+		for(int i=0; i<10;i++){
+			System.out.println(i+"th element is : "+realInputs[i]);
+		}
 		int output = perceptron.getDecisionOfInput(realInputs, NUM_INSTANCES, inputs, outputs);
 		System.out.print("Input "+realInputs+" is classified to "+output);
 	}
