@@ -14,12 +14,12 @@ public class Perceptron {
 	public int getDecisionOfInput(double[] input,int numberOfTrainingDataInstance,
 			double[][] trainingInputs, int[] trainingOutputs){
 		
-		trainData(numberOfTrainingDataInstance, trainingInputs, weights, trainingOutputs);
+		trainData(numberOfTrainingDataInstance, trainingInputs, trainingOutputs);
 		return calculateOutput(weights, inputs);
 		
 	}
 	
-	public void trainData(int numberOfInstances,double[][] inputs, double[] weights, int[] outputs ){
+	public void trainData(int numberOfInstances,double[][] inputs, int[] outputs ){
 		double localError, globalError;
 		int i, p, iteration=0, output;		
 		
@@ -76,9 +76,8 @@ public class Perceptron {
 		return (sum >= theta) ? 1 : 0;
 	}
 	
-	private int getTheta(){
-		
-		//TODO
+	private int getTheta(double sum){
+		double output = 1/(1+Math.pow(Math.E,sum));		
 		return 0;
 	}
 	
